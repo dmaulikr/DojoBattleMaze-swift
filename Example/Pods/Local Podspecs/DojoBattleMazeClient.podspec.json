@@ -1,0 +1,25 @@
+{
+  "name": "DojoBattleMazeClient",
+  "version": "0.1.1",
+  "summary": "A short description of DojoBattleMazeClient.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/DojoBattleMazeClient",
+  "license": "MIT",
+  "authors": {
+    "Vincenzo Scamporlino": "vinz.scamporlino@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/DojoBattleMazeClient.git",
+    "tag": "0.1.1"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "DojoBattleMazeClient": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}
