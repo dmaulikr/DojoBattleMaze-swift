@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Socket_IO_Client_Swift
+import SocketIOClientSwift
 
 public enum RobotDir : Int{
     case Up    = -1
@@ -51,7 +51,7 @@ public class Robot {
     var listener : RobotEventListenerProtocol?
 
     public init(endpoint : String, namespace: String){
-        socket = SocketIOClient(socketURL: endpoint, options: [.Log(false), .ForceWebsockets(true),
+        socket = SocketIOClient(socketURL: NSURL(string: endpoint)!, options: [.Log(true), .ForceWebsockets(true),
             .ForceNew(true), .Nsp(namespace), .HandleQueue(socketQueue)]);
     }
     
@@ -111,8 +111,10 @@ public class Robot {
         var ret : AnyObject? = nil;
         let param = obj == nil ? "" : obj;
         self.socket.emitWithAck(message, param)(timeoutAfter: 0){(data : Array<AnyObject>) in
-            ret = data[0];
-            dispatch_semaphore_signal(sem);
+            dispatch_async(self.socketQueue){
+                ret = data[0];
+                dispatch_semaphore_signal(sem);
+            }
         }
         dispatch_semaphore_wait(sem, DISPATCH_TIME_FOREVER);
         
@@ -127,14 +129,15 @@ public class Robot {
     }
     
     public func initialize(playerName : String){
-        self.playerName = playerName;
-        self.listenToEvents();
-        self.socket.connect();
-        if(self.state == RobotState.WaitForPlayers){
-            self.register();
-            self.emitMessage("Registered");
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)) { () -> Void in
+            self.playerName = playerName;
+            self.listenToEvents();
+            self.socket.connect();
+            if(self.state == RobotState.WaitForPlayers){
+                self.register();
+                self.emitMessage("Registered");
+            }
         }
-        
     }
     
     public func play(){
@@ -199,4 +202,5 @@ public class Robot {
         let score = try self.sendMessage("score") as! NSNumber;
         return score.longValue;
     }
+    
 }
