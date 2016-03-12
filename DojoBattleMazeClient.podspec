@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "DojoBattleMazeClient"
-  s.version          = "0.1.2"
+  s.version          = "0.1.5"
   s.summary          = "Let connect your iOS device to the DojoBattleMaze Server."
 
 # This description is used to generate tags and improve search results.
@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Vincenzo Scamporlino" => "vinz.scamporlino@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/DojoBattleMazeClient.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/vinzscam/DojoBattleMaze-swift.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '8.0'
@@ -39,5 +39,5 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'Socket.IO-Client-Swift', '~> 4.1.6'
+  s.dependency 'Socket.IO-Client-Swift', '~> 5.5.0'
 end

@@ -1,6 +1,5 @@
 import UIKit
 import XCTest
-import DojoBattleMazeClient
 
 class Tests: XCTestCase {
     

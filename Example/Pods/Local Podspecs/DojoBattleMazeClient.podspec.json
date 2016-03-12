@@ -1,16 +1,16 @@
 {
   "name": "DojoBattleMazeClient",
-  "version": "0.1.1",
-  "summary": "A short description of DojoBattleMazeClient.",
-  "description": "",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/DojoBattleMazeClient",
+  "version": "0.1.3",
+  "summary": "Let connect your iOS device to the DojoBattleMaze Server.",
+  "description": "Import the library to create your own Robot\nfor the DojoBattleMaze game.",
+  "homepage": "https://github.com/vinzscam",
   "license": "MIT",
   "authors": {
     "Vincenzo Scamporlino": "vinz.scamporlino@gmail.com"
   },
   "source": {
     "git": "https://github.com/<GITHUB_USERNAME>/DojoBattleMazeClient.git",
-    "tag": "0.1.1"
+    "tag": "0.1.3"
   },
   "platforms": {
     "ios": "8.0"
@@ -20,6 +20,11 @@
   "resource_bundles": {
     "DojoBattleMazeClient": [
       "Pod/Assets/*.png"
+    ]
+  },
+  "dependencies": {
+    "Socket.IO-Client-Swift": [
+      "~> 5.5.0"
     ]
   }
 }

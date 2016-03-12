@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '9E9CE7DE4AB13E380CDBEB71'
+               BlueprintIdentifier = '26DDD96DFA687EF56CA4E62F'
                BlueprintName = 'DojoBattleMazeClient'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'DojoBattleMazeClient.framework'>

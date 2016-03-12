@@ -1,0 +1,6 @@
+framework module DojoBattleMazeClient {
+  umbrella header "DojoBattleMazeClient-umbrella.h"
+
+  export *
+  module * { export * }
+}

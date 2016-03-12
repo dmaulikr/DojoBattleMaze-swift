@@ -84,8 +84,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-DojoBattleMazeClient_Tests/Socket_IO_Client_Swift.framework"
+  install_framework "Pods-DojoBattleMazeClient_Tests/DojoBattleMazeClient.framework"
+  install_framework "Pods-DojoBattleMazeClient_Tests/SocketIOClientSwift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-DojoBattleMazeClient_Tests/Socket_IO_Client_Swift.framework"
+  install_framework "Pods-DojoBattleMazeClient_Tests/DojoBattleMazeClient.framework"
+  install_framework "Pods-DojoBattleMazeClient_Tests/SocketIOClientSwift.framework"
 fi

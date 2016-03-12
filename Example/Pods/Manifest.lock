@@ -1,17 +1,17 @@
 PODS:
-  - DojoBattleMazeClient (0.1.1)
-  - Socket.IO-Client-Swift (4.1.6)
+  - DojoBattleMazeClient (0.1.3):
+    - Socket.IO-Client-Swift (~> 5.5.0)
+  - Socket.IO-Client-Swift (5.5.0)
 
 DEPENDENCIES:
   - DojoBattleMazeClient (from `../`)
-  - Socket.IO-Client-Swift (~> 4.1.6)
 
 EXTERNAL SOURCES:
   DojoBattleMazeClient:
     :path: ../
 
 SPEC CHECKSUMS:
-  DojoBattleMazeClient: cc9fc909ebbb0ee95cb381dea348f81623534edb
-  Socket.IO-Client-Swift: 5e8aa2961d1f32e5c0e104c00c9f192133a92d11
+  DojoBattleMazeClient: 99efe9abadaa6ecf21f79c8b08d295ccba026a00
+  Socket.IO-Client-Swift: f39dbd4e9b295907bb7fd4b9588b89c00426783d
 
 COCOAPODS: 0.39.0
